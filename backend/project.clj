@@ -4,6 +4,9 @@
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [compojure "1.6.1"]
+                 [ring "1.6.1"]
+                 [ring/ring-core "1.6.1"]
+                 [ring-server "0.5.0"]
                  [ring/ring-json "0.5.1"]
                  [ring-cors "0.1.13"]
                  [ring/ring-defaults "0.3.2"]]
@@ -12,4 +15,5 @@
          :port 3030}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                        [ring/ring-mock "0.3.2"]]}})
+                        [ring/ring-mock "0.3.2"]]}
+   :uberjar {:aot :all}})
