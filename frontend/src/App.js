@@ -40,7 +40,7 @@ function App() {
         <p>I like to peek the server on :3030 to fetch the date</p>
       </header>
       <div className="data-ticker">
-        Please click this button to fetch the date
+        Please click this button to fetch the date.
         <button name="fetch" onClick={getData}>Click me!</button>
         <div className="data-data">{data && data.date}</div>
       </div>
