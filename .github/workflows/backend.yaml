@@ -35,11 +35,13 @@ jobs:
 
       - name: Build container
         run: |
+          echo ::set-output "Building dockerfile"
           docker buildx build -f Dockerfile \
           --cache-to=type=local,mode=max,dest=/tmp/.buildx-cache-new \
           --cache-from=type=local,src=/tmp/.buildx-cache .
 
       - name: Move cache
         run: |
+          echo ::set-output "Moving cache"
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
