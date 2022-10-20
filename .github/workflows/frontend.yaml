@@ -1,9 +1,10 @@
 name: service-frontend
 on:
   push:
+    branches: [ "main" ]
     paths:
-      - 'frontend/**'
-      - '.github/workflows/frontend.yml'
+      - "frontend/**"
+      - ".github/workflows/frontend.yaml"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
