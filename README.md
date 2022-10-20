@@ -1,1 +1,1 @@
-## Better Dockerfile, for everybody
+## Use Dockerfiles, not docker fails
